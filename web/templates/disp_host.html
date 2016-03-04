@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h3>{{ host.h_name }}</h3>
+<h4>{{ host.h_ip }}</h4>
+<li>{{ host.h_cpu }}</li>
+<li>{{ host.h_mem }}</li>
+<h2 />
+<form action="/cmd_out/{{ host.id }}/" method="post">
+    {% csrf_token %}
+command:<li>{{ cmd.cmd }}</li>
+<input type="submit" value="提交">
+
+    </form>
+</body>
+</html>

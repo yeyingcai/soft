@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>通讯录</title>
+<style type="text/css">
+.warp_table {border-collapse:collapse; width:550px; border:1px solid #4d9ab0}
+.warp_table td {border:1px solid #4d9ab0}
+</style>
+<script language="javascript"><!--
+function senfe(o,a,b,c,d){
+ var t=document.getElementById(o).getElementsByTagName("tr");
+ for(var i=0;i<t.length;i++){
+  t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b;
+  t[i].onclick=function(){
+   if(this.x!="1"){
+    this.x="1";
+    this.style.backgroundColor=d;
+   }else{
+    this.x="0";
+    this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+   }
+  }
+  t[i].onmouseover=function(){
+   if(this.x!="1")this.style.backgroundColor=c;
+  }
+  t[i].onmouseout=function(){
+   if(this.x!="1")this.style.backgroundColor=(this.sectionRowIndex%2==0)?a:b;
+  }
+ }
+}
+--></script>
+</head>
+<body>
+<h1>通讯录详情</h1>
+<h3><a href="http://www.865171.cn" style="color:#000;">www.yitong111.com</a></h3>
+<table class="warp_table" id="changecolor">
+    <tr>
+        <th width="20%">姓名</th>
+        <th width="20%">性别</th>
+        <th width="20%">年龄</th>
+        <th width="20%">地址</th>
+    </tr>
+    {% for user in address %}
+  <tr>
+    <td>&nbsp;{{ user.name }}</td>
+    <td>&nbsp;{{ user.sex }}</td>
+    <td>&nbsp;{{ user.age }}</td>
+    <td>&nbsp;{{ user.address }}</td>
+  </tr>
+    {% endfor %}
+</table>
+<script language="javascript"><!--
+//senfe("表格名称","奇数行背景","偶数行背景","鼠标经过背景","点击后背景");
+senfe("changecolor","#f8fbfc","#e5f1f4","#ecfbd4","#bce774");
+--></script>
+</body>
+</html>

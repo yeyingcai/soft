@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+ <html>
+<head>
+    <title></title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+CPU:<li>{{ form.h_cpu }}</li>
+    MEM:<li>{{ form.h_mem }}</li>
+    name:<li>{{ form.h_name }}</li>
+    IP:<li>{{ form.h_ip }}</li>
+<input type="submit" value="提交">
+
+    </form>
+</body>
+
+ </html>
+<!--<form method="post">
+    主机名：<input type="text" name="hostname" /><br />
+    IP地址：<input type="text" name="h_ip" /><br />
+    CPU信息：<input type="text" name="h_cpu" /><br />
+    MEM信息：<input type="text" name="h_mem" /><br />
+    <input type="submit" value="添加" />
+</form>
+<li><a href="/index/" >显示全部</a> </li>
+
+
+<!--<form method='post'>
+
+<input type="submit" value="提交">
+</form>-->
