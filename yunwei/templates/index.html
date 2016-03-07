@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+{% for host in hosts %}
+<li>{{ host.h_name }}</li>
+    <li>{{ host.h_cpu }}</li>
+    <li>{{ host.h_mem }}</li>
+    <li>{{ host.h_user }}</li>
+    <li>{{ host.h_pass }}</li>
+    <li>{{ host.h_mx }}</li>
+{% endfor %}
+</body>
+</html>

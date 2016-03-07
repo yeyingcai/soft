@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>add_host</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+主机名:<li>{{ hosts.h_name }}</li>
+    IP:<li>{{ ip.h_ip }}</li>
+    MEM:<li>{{ hosts.h_mem }}</li>
+    CPU:<li>{{ hosts.h_cpu }}</li>
+    USER:<li>{{ hosts.h_user }}</li>
+    密码:<li>{{ hosts.h_pass }}</li>
+    磁盘:<li>{{ hosts.h_disk }}</li>
+    描述:<li>{{ hosts.h_mx }}</li>
+
+<input type="submit" value="提交">
+    </form>
+ </body>
+</html>
