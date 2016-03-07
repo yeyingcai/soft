@@ -5,9 +5,13 @@
     <title></title>
 </head>
 <body>
-{% for ip_adr in hosts %}
-<a href="/disp_host/{{ ip_adr.id }}"> <li>{{ ip_adr.h_ip.h_ip }}</li></a>
+{{ h_info.h_ip.h_ip }}
+{{ h_info.h_name }}
+{{ h_info.h_cpu }}
+{{ h_info.h_user }}
+{{ h_info.h_pass }}
+{{ h_info.h_disk }}
+{{ h_info.h_mem }}
 
-{% endfor %}
 </body>
 </html>

@@ -29,3 +29,7 @@ def index(req):
     ip = ip_info.objects.all()
     hosts = Host_info.objects.all()
     return render(req,'index.html',{'ip':ip,'hosts':hosts})
+
+def disp(req,id):
+    h_info = Host_info.objects.get(id=id)
+    return render(req,'disp_info.html', {'h_info':h_info})
