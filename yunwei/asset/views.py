@@ -33,3 +33,7 @@ def index(req):
 def disp(req,id):
     h_info = Host_info.objects.get(id=id)
     return render(req,'disp_info.html', {'h_info':h_info})
+
+def del_host(req,id):
+    ip_info.objects.get(id=id).delete()
+    return render(req,'del_info.html')

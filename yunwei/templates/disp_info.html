@@ -5,13 +5,15 @@
     <title></title>
 </head>
 <body>
-{{ h_info.h_ip.h_ip }}
-{{ h_info.h_name }}
-{{ h_info.h_cpu }}
-{{ h_info.h_user }}
-{{ h_info.h_pass }}
-{{ h_info.h_disk }}
-{{ h_info.h_mem }}
+<li>IP地址{{ h_info.h_ip.h_ip }}</li>
+主机名：{{ h_info.h_name }}
+CPU信息：{{ h_info.h_cpu }}
+用户名：{{ h_info.h_user }}
+密码：{{ h_info.h_pass }}
+磁盘：{{ h_info.h_disk }}
+内存：{{ h_info.h_mem }}
+{{ h_info.h_ip_id }}
 
+<a href="/delete_host/{{ h_info.h_ip_id }}"> <li>删除</li></a>
 </body>
 </html>
